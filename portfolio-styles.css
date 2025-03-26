@@ -1,0 +1,146 @@
+:root {
+    --text-color: #1a1c20;
+    --link-color: #4a76ee;
+    --background-color: #eeeff1;
+
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+body {
+    font-family: Poppins,sans-serif;
+    background-color: var(--background-color);
+
+}
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+/*navbar*/
+
+#navbar{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-top: 10px;
+}
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+.right a {
+    margin: 0 10px;
+    color: var(--text-color);
+}
+i {
+    padding-right: 1px;
+}
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* Hero */
+
+.hero-section {
+    padding: 0 50px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+.hero-section h2 {
+    font-size: 40px;
+    
+}
+.desc {
+    display: flex;
+    flex-direction: column;
+    padding: 200px;
+    justify-content: center;
+    flex: 5;
+    
+}
+.links {
+    display: flex;
+   justify-content: left;
+
+}
+.links a {
+    margin-right: 10px;
+    border: solid;
+    border-radius: 10px;
+    padding: 2px 10px;
+    color: var(--link-color)
+}
+.hero-section .links a:hover {
+    background-color: var(--link-color);
+    color: var(--background-color);
+}
+.headshot {
+    height: auto;
+    max-height: 400px;
+    border-radius: 300px;
+    display: flex;
+    margin: 150px;
+    padding: 10px;
+    width: auto;
+    max-width: 400px;
+    flex: 3;
+    margin-left: 100px;
+}
+
+
+@media (max-width: 600px){
+    /*navbar*/
+    nav {
+        padding: 0px 20px;
+    }
+    nav .right a {
+        font-size: 22px;
+    }
+    
+    nav .right a span {
+        display: none;
+    }
+/* Hero */
+    .hero {
+        flex-direction: column-reverse;
+    }
+    .desc {
+        flex-direction: row;
+        max-width: 50vw;
+        justify-content:left
+    }
+    .headshot {
+        padding: 0;
+    }
+}
+@media (max-width: 850px){
+     /*navbar*/
+    nav {
+        margin-right: -550px;
+    }
+    
+    img {
+        flex: 4;
+        margin: 50px;   
+    }
+    .hero-section h2 {
+        font-size: 35px;
+    }
+}
